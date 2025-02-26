@@ -4,7 +4,7 @@ const SeeAllGamesButton = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/all-games'); // Update this path as needed
+    navigate('/games');
   };
 
   return (

@@ -1,17 +1,19 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
+import Games from './pages/Games';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
     <Router>
       <div className="min-h-screen">
-        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/all-games" element={<div></div>} />
+          <Route path="/" element={<><Header /><Home /></>} />
+          <Route path="/games" element={<Games />} />
           {/* Add other routes here */}
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

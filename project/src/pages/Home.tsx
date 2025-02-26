@@ -17,7 +17,7 @@ const Home = () => {
             </h1>
             <GameCard />
             <div className="mt-8 flex justify-center md:justify-start">
-              <SeeAllGamesButton />
+              <SeeAllGamesButton  />
             </div>
           </div>
           <div className="relative flex justify-center items-center">
