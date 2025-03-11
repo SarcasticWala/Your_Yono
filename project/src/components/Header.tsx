@@ -1,11 +1,11 @@
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const navigateToGames = () => {
-    navigate('/games');
-  };
+  // const navigateToGames = () => {
+  //   navigate('/games');
+  // };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 md:px-10 py-4 flex justify-between items-center bg-transparent">
@@ -16,7 +16,7 @@ const Header = () => {
         <a href="/t&c" className="text-white hover:text-pink-500 transition-colors text-sm md:text-base">T&C</a>
         <a href="/contact" className="text-white hover:text-pink-500 transition-colors text-sm md:text-base">Contact</a>
         <button 
-          onClick={navigateToGames} 
+          // onClick={navigateToGames} 
           className="bg-red-500 text-white px-4 md:px-6 py-2 rounded-full hover:bg-red-600 transition-colors text-sm md:text-base"
         >
           All Apps

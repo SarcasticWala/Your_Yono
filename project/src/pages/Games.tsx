@@ -1,6 +1,5 @@
 import React from 'react';
 import { cardsData } from '../assets/assets';
-import Footer from '../components/Footer';
 
 const Games: React.FC = () => {
   return (
@@ -97,7 +96,7 @@ const Games: React.FC = () => {
           </div>
         ))}
       </div>
-      {/* <Footer /> */}
+    
     </div>
   );
 };
