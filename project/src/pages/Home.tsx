@@ -47,7 +47,7 @@ const Home = () => {
     disableOnInteraction: false,
   }}
   loop={true}
-  className="w-[200px] md:w-[350px] lg:w-[450px] sm:w-[100px] sm:h-[100px] md:h-[350px] lg:h-[450px] pb-4"
+  className="w-[205px] md:w-[350px] lg:w-[450px] sm:w-[100px] sm:h-[100px] md:h-[350px] lg:h-[450px] pb-4"
 >
   {images.map((image, index) => (
     <SwiperSlide key={index}>
