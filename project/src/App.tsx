@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Games from './pages/Games';
 import Footer from './components/Footer';
+import Login from './pages/Login';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<><Header /><Home /></>} />
           <Route path="/games" element={<Games />} />
+          <Route path="/login" element={<Login />} />
           {/* Add other routes here */}
         </Routes>
         <Footer />

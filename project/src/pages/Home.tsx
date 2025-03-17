@@ -7,12 +7,13 @@ import ScrollDown from '../components/ScrollDown';
 import SeeAllGamesButton from '../components/SeeAllGamesButton';
 
 const Home = () => {
-  // Array of image paths (replace with your actual image paths)
-  const images = [
-    '/src/assets/game-coin.png',
-    '/src/assets/img4.png',
-    '/src/assets/img3.png',
-    '/src/assets/img4.png',
+  // Array of game data
+  const games = [
+    { id: 1, image: '/src/assets/game-coin.png', name: 'Game Coin' },
+    { id: 2, image: '/src/assets/160248 1.png', name: 'Game 160248' },
+    { id: 3, image: '/src/assets/img4.png', name: 'Game Image 4' },
+    { id: 4, image: '/src/assets/img3.png', name: 'Game Image 3' },
+    { id: 5, image: '/src/assets/jackpot.png', name: 'Jackpot' },
   ];
 
   return (
@@ -49,13 +50,15 @@ const Home = () => {
   loop={true}
   className="w-[200px] md:w-[350px] lg:w-[450px] sm:w-[100px] sm:h-[100px] md:h-[350px] lg:h-[450px] pb-4"
 >
-  {images.map((image, index) => (
-    <SwiperSlide key={index}>
-      <img
-        src={image}
-        alt={`Game Coin ${index + 1}`}
-        className="w-full h-auto object-contain transform transition-transform duration-500 hover:scale-105"
-      />
+  {games.map((game) => (
+    <SwiperSlide key={game.id}>
+      <div className="w-full h-full flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${game.image})` }}>
+        <img
+          src={game.image}
+          alt={game.name}
+          className="w-full h-auto object-contain transform transition-transform duration-500 hover:scale-105"
+        />
+      </div>
     </SwiperSlide>
   ))}
 </Swiper>
