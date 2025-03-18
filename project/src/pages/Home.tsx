@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination,Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import GameCard from '../components/GameCard';
@@ -7,13 +7,12 @@ import ScrollDown from '../components/ScrollDown';
 import SeeAllGamesButton from '../components/SeeAllGamesButton';
 
 const Home = () => {
-  // Array of game data
-  const games = [
-    { id: 1, image: '/src/assets/game-coin.png', name: 'Game Coin' },
-    { id: 2, image: '/src/assets/Untitled-1 1.png', name: 'Game 160248' },
-    { id: 3, image: '/src/assets/img4.png', name: 'Game Image 4' },
-    { id: 4, image: '/src/assets/img3.png', name: 'Game Image 3' },
-    { id: 5, image: '/src/assets/jackpot.png', name: 'Jackpot' },
+  // Array of image paths (replace with your actual image paths)
+  const images = [
+    '/src/assets/game-coin.png',
+    '/src/assets/img4.png',
+    '/src/assets/img3.png',
+    '/src/assets/img4.png',
   ];
 
   return (
@@ -50,16 +49,13 @@ const Home = () => {
   loop={true}
   className="w-[200px] md:w-[350px] lg:w-[450px] sm:w-[100px] sm:h-[100px] md:h-[350px] lg:h-[450px] pb-4"
 >
-  {games.map((game) => (
-    <SwiperSlide key={game.id}>
-      <div className="w-full h-full flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${game.image})`, backgroundSize: game.name === 'Jackpot' ? 'contain' : 'contain', backgroundRepeat: 'no-repeat' }}>
-        <img
-          src={game.image}
-          alt={game.name}
-          className="w-full h-auto object-contain transform transition-transform duration-500 hover:scale-105"
-          style={{ position: 'relative', zIndex: 1 }}
-        />
-      </div>
+  {images.map((image, index) => (
+    <SwiperSlide key={index}>
+      <img
+        src={image}
+        alt={`Game Coin ${index + 1}`}
+        className="w-full h-auto object-contain transform transition-transform duration-500 hover:scale-105"
+      />
     </SwiperSlide>
   ))}
 </Swiper>
@@ -67,7 +63,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative bottom-550 left-1/2 transform -translate-x-1/2">
+      <div className="relative bottom-500 left-1/2 transform -translate-x-1/2">
         <ScrollDown />
        
        
